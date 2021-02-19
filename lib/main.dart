@@ -31,12 +31,13 @@ class _KeyboardDemoState extends State<KeyboardDemo> {
           isShow = false;
         });
       },
-      child: SafeArea(
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Column(
-            children: [
-              TextField(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 35),
+              child: TextField(
                 maxLines: 7,
                 onTap: () {
                   setState(() {
@@ -54,30 +55,30 @@ class _KeyboardDemoState extends State<KeyboardDemo> {
                 showCursor: true,
                 readOnly: _readOnly,
               ),
-              Spacer(),
-              isShow == true
-                  ? GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          isShow = false;
-                        });
+            ),
+            Spacer(),
+            isShow == true
+                ? GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isShow = false;
+                      });
+                    },
+                    child: CustomKeyboard(
+                      onTextInput: (myText) {
+                        _insertText(myText);
                       },
-                      child: CustomKeyboard(
-                        onTextInput: (myText) {
-                          _insertText(myText);
-                        },
-                        onBackspace: () {
-                          _backspace();
-                        },
-                        onEnter: () {
-                          print("Called Enter");
-                          _enter();
-                        },
-                      ),
-                    )
-                  : SizedBox()
-            ],
-          ),
+                      onBackspace: () {
+                        _backspace();
+                      },
+                      onEnter: () {
+                        print("Called Enter");
+                        _enter();
+                      },
+                    ),
+                  )
+                : SizedBox()
+          ],
         ),
       ),
     );
@@ -231,7 +232,7 @@ class CustomKeyboard extends StatelessWidget {
       child: Row(
         children: [
           TextKey(
-            text: 'अ',
+            text: 'A',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -247,7 +248,7 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'उ',
+            text: 'V',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -267,7 +268,7 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'औ',
+            text: 'E',
             onTextInput: _textInputHandler,
           ),
         ],
@@ -288,7 +289,7 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'झ',
+            text: 'R',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -296,7 +297,7 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'ध',
+            text: 'U',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -304,7 +305,7 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'च',
+            text: 'W',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -329,7 +330,7 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'द',
+            text: 'V',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -341,7 +342,7 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'छ',
+            text: 'O',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -422,7 +423,7 @@ class CustomKeyboard extends StatelessWidget {
     return Expanded(
       child: Row(
         children: [
-          QuertyKey(),
+          // QuertyKey(),
           TextKey(
             text: ' ',
             flex: 4,
@@ -508,7 +509,7 @@ class BackspaceKey extends StatelessWidget {
   }
 }
 
-class QuertyKey extends StatelessWidget {
+/*class QuertyKey extends StatelessWidget {
   const QuertyKey({
     Key key,
     // this.onEnter,
@@ -540,7 +541,7 @@ class QuertyKey extends StatelessWidget {
       ),
     );
   }
-}
+}*/
 
 class EnterKey extends StatelessWidget {
   const EnterKey({
