@@ -217,10 +217,10 @@ class CustomKeyboard extends StatelessWidget {
       color: Colors.white30,
       child: Column(
         children: [
-          buildRowOne(),
           buildRowTwo(),
-          buildRowThird(),
+          buildRowOne(),
           buildRowFour(),
+          buildRowThird(),
           buildRowFive()
         ],
       ),
@@ -231,6 +231,18 @@ class CustomKeyboard extends StatelessWidget {
     return Expanded(
       child: Row(
         children: [
+          TextKey(
+            text: 'ऐ',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'ओ',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'E',
+            onTextInput: _textInputHandler,
+          ),
           TextKey(
             text: 'A',
             onTextInput: _textInputHandler,
@@ -259,18 +271,7 @@ class CustomKeyboard extends StatelessWidget {
             text: 'ए',
             onTextInput: _textInputHandler,
           ),
-          TextKey(
-            text: 'ऐ',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
-            text: 'ओ',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
-            text: 'E',
-            onTextInput: _textInputHandler,
-          ),
+
         ],
       ),
     );
@@ -280,6 +281,15 @@ class CustomKeyboard extends StatelessWidget {
     return Expanded(
       child: Row(
         children: [
+
+          TextKey(
+            text: 'घ',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'W',
+            onTextInput: _textInputHandler,
+          ),
           TextKey(
             text: 'म',
             onTextInput: _textInputHandler,
@@ -301,14 +311,6 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'घ',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
-            text: 'W',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
             text: 'ब',
             onTextInput: _textInputHandler,
           ),
@@ -325,6 +327,19 @@ class CustomKeyboard extends StatelessWidget {
     return Expanded(
       child: Row(
         children: [
+
+          TextKey(
+            text: 'ट',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'O',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'ठ',
+            onTextInput: _textInputHandler,
+          ),
           TextKey(
             text: 'ड',
             onTextInput: _textInputHandler,
@@ -342,14 +357,6 @@ class CustomKeyboard extends StatelessWidget {
             onTextInput: _textInputHandler,
           ),
           TextKey(
-            text: 'O',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
-            text: 'ठ',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
             text: 'थ',
             onTextInput: _textInputHandler,
           ),
@@ -357,10 +364,7 @@ class CustomKeyboard extends StatelessWidget {
             text: 'च',
             onTextInput: _textInputHandler,
           ),
-          TextKey(
-            text: 'ट',
-            onTextInput: _textInputHandler,
-          ),
+
           TextKey(
             text: 'त',
             onTextInput: _textInputHandler,
@@ -374,22 +378,7 @@ class CustomKeyboard extends StatelessWidget {
     return Expanded(
       child: Row(
         children: [
-          TextKey(
-            text: 'व',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
-            text: 'ळ',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
-            text: 'प',
-            onTextInput: _textInputHandler,
-          ),
-          TextKey(
-            text: 'य',
-            onTextInput: _textInputHandler,
-          ),
+
           TextKey(
             text: 'श',
             onTextInput: _textInputHandler,
@@ -400,6 +389,18 @@ class CustomKeyboard extends StatelessWidget {
           ),
           TextKey(
             text: 'स',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'व',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'ळ',
+            onTextInput: _textInputHandler,
+          ),
+          TextKey(
+            text: 'प',
             onTextInput: _textInputHandler,
           ),
           TextKey(
@@ -414,6 +415,11 @@ class CustomKeyboard extends StatelessWidget {
             text: 'ल',
             onTextInput: _textInputHandler,
           ),
+          TextKey(
+            text: 'य',
+            onTextInput: _textInputHandler,
+          ),
+
         ],
       ),
     );
